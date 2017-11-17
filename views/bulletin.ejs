@@ -1,0 +1,154 @@
+<% include ./partials/header%>
+
+    <!--CAROUSEL-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="Images/Church.jpg" alt="Church">
+				<div class="carousel-caption">
+                    <p class="carousel-font1" id="mytexttest">Welcome to </p>
+					<p class="carousel-font2">St. John's</p>
+					<hr style="width:50%;">
+					<p class="carousel-font3">Roman Catholic Church</p>
+
+                </div>
+			</div>
+
+            <div class="item">
+                <img src="Images/Altar_wide.jpg" alt="Altar">
+                <div class="carousel-caption">
+                    <p class="carousel-font1">Welcome to </p>
+					<p class="carousel-font2">St. John's</p>
+					<hr style="width:50%;">
+					<p class="carousel-font3">Roman Catholic Church</p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <img src="Images/Window.jpg" alt="Windows">
+                <div class="carousel-caption">
+                    <p class="carousel-font1">Welcome to </p>
+					<p class="carousel-font2">St. John's</p>
+					<hr style="width:50%;">
+					<p class="carousel-font3">Roman Catholic Church</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- End Of Carousel -->
+
+    <div class="container-fluid text-center">
+      <h1>Weekly Bulletin</h1>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="well">
+            <p>If you do not already have a Portable Document File(PDF) Reader you can download Adobe Reader for free <a href="https://get.adobe.com/reader/"><strong>here.</strong></a>
+            <a href="https://get.adobe.com/reader/" target="_blank"><img src="img/adobeReader.jpg" alt="Get Adobe Reader" width="50px" height="50px"></a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-xs-12" id="pdfLinks">
+          <a href="Bulletines/Bulletin-20170212-1.pdf" target="_blank">Bulletin for the weekend of February 12, 2017.</a><br>
+        	<a href="Bulletines/Bulletin-20170205-1.pdf" target="_blank">Bulletin for the weekend of February 5, 2017.</a><br>
+        	<a href="Bulletines/Bulletin-20170129-1.pdf" target="_blank">Bulletin for the weekend of January 29, 2017.</a><br>
+        	<a href="Bulletines/Bulletin-20170122-1.pdf" target="_blank">Bulletin for the weekend of January 22, 2017.</a><br>
+        	<a href="Bulletines/Bulletin-20170115-1.pdf" target="_blank">Bulletin for the weekend of January 15, 2017.</a><br>
+        	<a href="Bulletines/Bulletin-20170108-1.pdf" target="_blank">Bulletin for the weekend of January 08, 2017.</a><br>
+        	<a href="Bulletines/Bulletin-20170101-1.pdf" target="_blank">Bulletin for the weekend of January 01, 2017.</a><br>
+        	<a href="Bulletines/Bulletin-20161225-1.pdf" target="_blank">Bulletin for the weekend of December 25, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161218-1.pdf" target="_blank">Bulletin for the weekend of December 18, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161211-1.pdf" target="_blank">Bulletin for the weekend of December 11, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161204-1.pdf" target="_blank">Bulletin for the weekend of December 4, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161127-1.pdf" target="_blank">Bulletin for the weekend of November 27, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161120-1.pdf" target="_blank">Bulletin for the weekend of November 20, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161113-1.pdf" target="_blank">Bulletin for the weekend of November 13, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161106-1.pdf" target="_blank">Bulletin for the weekend of November 6, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161030-1.pdf" target="_blank">Bulletin for the weekend of October 30, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161023-1.pdf" target="_blank">Bulletin for the weekend of October 23, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161016-1.pdf" target="_blank">Bulletin for the weekend of October 16, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161009-1.pdf" target="_blank">Bulletin for the weekend of October 9, 2016.</a><br>
+        	<a href="Bulletines/Bulletin-20161002-1.pdf" target="_blank">Bulletin for the weekend of October 2, 2016.</a><br>
+        </div>
+
+      </div>
+    </div>
+
+
+    <footer class="text-center">
+        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p>St. John’s Roman Catholic Church &copy2017</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize Tooltip
+			$('[data-toggle="tooltip"]').tooltip();
+
+
+
+        })
+
+		$(document).snowfall();
+
+		$(window).resize(() => {
+			$(document).snowfall('clear');
+			$(document).snowfall();
+		});
+    </script>
+
+	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links in navbar + footer link
+		  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+		  // Make sure this.hash has a value before overriding default behavior
+		  if (this.hash !== "") {
+
+			// Prevent default anchor click behavior
+			event.preventDefault();
+
+			// Store hash
+			var hash = this.hash;
+
+			// Using jQuery's animate() method to add smooth page scroll
+			// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+			$('html, body').animate({
+			  scrollTop: $(hash).offset().top
+			}, 900, function(){
+
+			  // Add hash (#) to URL when done scrolling (default click behavior)
+			  window.location.hash = hash;
+			  });
+			} // End if
+		  });
+		})
+	</script>
+
+</body>
+
+</html>

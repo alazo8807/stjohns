@@ -1,0 +1,248 @@
+body {
+    font: 400 17px/1.7 Lato, sans-serif;
+    color: #777;
+}
+
+h1{
+	font-family: Lato, sans-serif !important;
+	color: #444444 !important;
+	margin-bottom:25px !important;
+
+}
+
+
+.navbar {
+	font-family: Nunito, sans-serif;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+#homeNav {
+    padding: 0px 15px 0px 15px !important;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+
+/* Add a dark background color with a little bit see-through */
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+
+/* Add a gray color to all navbar links */
+
+.navbar li a,
+.navbar .navbar-brand {
+    color: #d5d5d5 !important;
+}
+
+
+/* On hover, the links will turn white */
+
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+
+/* The active link */
+
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+}
+
+
+/* Remove border color from the collapsible button */
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar-brand{
+	font-family: IM Fell English !important;
+}
+
+/* Dropdown */
+
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+}
+
+
+/* Dropdown links */
+
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+
+/* On hover, the dropdown links will turn red */
+
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+
+.carousel-font1 {
+	font: normal 500 84px/0.7 Lora, Bilbo Swash Caps;
+}
+
+.carousel-font2 {
+	font: 900 60px/0.7 Lora, Open Sans;
+}
+
+.carousel-font3 {
+	font: 900 40px/0.7 Lora, Open Sans;
+}
+
+
+.carousel-inner img {
+    /* -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); make all photos black and white */
+    background-size: contain;
+    width: 100%; /* Set width to 100% */
+    height:auto;
+    margin: auto;
+}
+
+.carousel-caption{
+		top:30% !important;
+
+}
+
+@media (max-width: 720px) {
+    .carousel-caption {
+        top:20% !important;
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+
+.container {
+    padding: 80px 120px;
+}
+
+.container h1{
+	margin-bottom: 20px;
+}
+.person {
+    border: 5px solid transparent;
+	margin-top: 25px;
+    margin-bottom: 25px;
+    opacity: 0.7;
+}
+
+.person:hover {
+    border-color: #d6d6db;
+    opacity: 0.9;
+  /*  width: 70%;
+    height:70%;*/
+
+}
+
+.container-fluid h1{
+	margin-bottom: 20px;
+}
+
+.mass-time-left{
+	text-align: right;
+	font-weight:bold;
+}
+
+.mass-time-right{
+	text-align: left;
+}
+
+@media (max-width: 750px) {
+    .mass-time-left {
+        text-align: center !important;
+
+    }
+
+	.mass-time-right {
+        text-align: center !important;
+
+    }
+}
+
+#pdfLinks {
+  line-height: 2;
+
+}
+
+#pdfLinks a:hover{
+  font-weight: bold;
+}
+
+#calendar {
+	max-width: 900px;
+	margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+
+
+/* Add a dark background color to the footer */
+
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+
+/* Remove rounded borders on input fields */
+.form-control {
+    border-radius: 0;
+}
+
+/* Disable the ability to resize textareas */
+textarea {
+    resize: none;
+}
+
+.btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }

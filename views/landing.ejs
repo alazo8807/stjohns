@@ -1,0 +1,243 @@
+<% include ./partials/header %>
+
+    <!--CAROUSEL-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="img/Church.jpg" alt="Church">
+				<div class="carousel-caption">
+                    <p class="carousel-font1" id="mytexttest">Welcome to </p>
+					<p class="carousel-font2">St. John's</p>
+					<hr style="width:50%;">
+					<p class="carousel-font3">Roman Catholic Church</p>
+
+                </div>
+			</div>
+
+            <div class="item">
+                <img src="img/Altar_wide.jpg" alt="Altar">
+                <div class="carousel-caption">
+                    <p class="carousel-font1">Welcome to </p>
+					<p class="carousel-font2">St. John's</p>
+					<hr style="width:50%;">
+					<p class="carousel-font3">Roman Catholic Church</p>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <img src="img/Window.jpg" alt="Windows">
+                <div class="carousel-caption">
+                    <p class="carousel-font1">Welcome to </p>
+					<p class="carousel-font2">St. John's</p>
+					<hr style="width:50%;">
+					<p class="carousel-font3">Roman Catholic Church</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- End Of Carousel -->
+
+
+    <div id="about" class="container text-center">
+        <h1><strong>St. John’s Roman Catholic Church:</strong></h1>
+        <p>
+            Is a welcoming and responsive bilingual faith community, nourished by the Word of God and the Eucharistic Table. We are open and trusting in the love of Jesus Christ to advance the power of the Holy Spirit, within the parish and beyond, by living the
+            Gospel. Our Church is composed of two Parish communities: St. John the Baptist and Our Lady of Guadalupe. Our Masses, events and services are provided both in English and Spanish. St. John’s community provides its parishioners with many opportunities
+            for a vibrant sacramental life while celebrating a rich multicultural heritage. Welcome to our community!
+        </p>
+
+        <div class="row">
+        	<div class="col-sm-2"></div>
+            <div class="col-sm-4">
+                <img class="img-circle person" src="img/Father_Francisco_Cruz.jpg" alt="Father Francisco Cruz">
+                <p><strong>Father Francisco Cruz</strong></p>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-circle person" src="img/Gloria_Montoya.jpg" alt="Gloria Montoya">
+                <p><strong>Secretary Glory Montoya</strong></p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+	</div>
+	<div id="massTime" class="container-fluid bg-grey">
+		<h1 class="text-center">Join our Mass:</h1>
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="mass-time-left">Sunday:</p>
+			</div>
+			<div class="col-sm-6">
+				<p class="mass-time-right">9:30am</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="mass-time-left">Tuesday, Wednesday, Thursday:</p>
+			</div>
+			<div class="col-sm-6">
+				<p class="mass-time-right">8:30am</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="mass-time-left">Saturday:</p>
+			</div>
+			<div class="col-sm-6">
+				<p class="mass-time-right">8:30am & 5:00pm</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<p class="mass-time-left">First Friday of the Month:</p>
+			</div>
+			<div class="col-sm-6">
+				<p class="mass-time-right">Eucharistic Adoration - 7:30am followed by Mass at 8:30am</p>
+			</div>
+		</div>
+
+    </div>
+
+
+    <div id="contact"class="container-fluid">
+        <h1 class="text-center">Contact</h1>
+        <div class="row">
+            <div class="col-sm-5">
+                <p><strong>Our Address:</strong></p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> 85 Strange St, Kitchener, ON N2G 1R4, Canada</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> office@stjohnkitchener.com</p>
+            </div>
+            <div class="col-sm-7">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Set height and width with CSS -->
+    <div id="googleMap" style="height:400px;width:100%;"></div>
+
+    <!-- Add Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        var myCenter = new google.maps.LatLng(43.448481, -80.508722);
+
+		var styledMapType = new google.maps.StyledMapType(
+
+		            );
+
+
+
+        function initialize() {
+            
+            console.log("map init");
+            
+            var mapProp = {
+                center: myCenter,
+                zoom: 15,
+                scrollwheel: false,
+                draggable: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+
+            marker.setMap(map);
+            //Associate the styled map with the MapTypeId and set it to display.
+			//map.mapTypes.set('styled_map', styledMapType);
+        	//map.setMapTypeId('styled_map');
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <footer class="text-center">
+        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p>St. John’s Roman Catholic Church &copy2017</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+
+
+        })
+
+		$(document).snowfall();
+
+		$(window).resize(() => {
+			$(document).snowfall('clear');
+			$(document).snowfall();
+		});
+    </script>
+
+	<script>
+		$(document).ready(function(){
+		  // Add smooth scrolling to all links in navbar + footer link
+		  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+		  // Make sure this.hash has a value before overriding default behavior
+		  if (this.hash !== "") {
+
+			// Prevent default anchor click behavior
+			event.preventDefault();
+
+			// Store hash
+			var hash = this.hash;
+
+			// Using jQuery's animate() method to add smooth page scroll
+			// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+			$('html, body').animate({
+			  scrollTop: $(hash).offset().top
+			}, 900, function(){
+
+			  // Add hash (#) to URL when done scrolling (default click behavior)
+			  window.location.hash = hash;
+			  });
+			} // End if
+		  });
+		})
+	</script>
+
+</body>
+
+</html>
