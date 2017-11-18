@@ -6,6 +6,8 @@ app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + '/public'));
 
+app.use
+
 app.get("/", function(req, res){
    res.redirect("/landing"); 
 });
