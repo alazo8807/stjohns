@@ -14,10 +14,17 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#myCarousel">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#massTime">MASS TIME</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <% if(isHomePage){ %>
+                        <li><a href="#myCarousel">HOME</a></li>
+                    <% } else{ %>
+                        <li><a href="/">HOME</a></li>
+                    <% } %>
+                    
+                    <% if(isHomePage){ %>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#massTime">MASS TIME</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    <% } %>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
                         <span class="caret"></span>
