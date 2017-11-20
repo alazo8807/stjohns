@@ -1,10 +1,13 @@
 var express = require("express"),
-        app = express();
-
+        app = express(),
+ bodyParser = require("body-parser"),
+ nodemailer = require('nodemailer'),
+smtpTransport = require('nodemailer-smtp-transport');
+ 
 var isHomePage = true;        
 
 app.set("view engine", "ejs");
-
+app.use( bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
 // app.use(function(req,res,next){
@@ -17,6 +20,36 @@ app.get("/", function(req, res){
 
 app.get("/landing", function(req, res){
    res.render("landing", {isHomePage: true}); 
+});
+
+app.post("/", function(req,res){
+   var nodemailer = require('nodemailer');
+   
+   var transporter = nodemailer.createTransport({
+     service: 'gmail',
+     auth: {
+       user: 'stjohnkitchener@gmail.com',
+       pass: 'Guadalupe1234'
+     }
+   });
+   
+   
+   var mailOptions = {
+     from: req.body.email,
+     to: 'stjohnkitchener@gmail.com',
+     subject: 'From ' + req.body.name,
+     text: 'Reply to: ' + req.body.email + '\r\r' +  req.body.comments
+   };
+   
+   transporter.sendMail(mailOptions, function(error, info){
+     if (error) {
+       console.log(error);
+       res.redirect("/landing");
+     } else {
+       console.log('Email sent: ' + info.response);
+       res.redirect("/landing");
+     }
+   });
 });
 
 app.get("/homilies", function(req, res) {
