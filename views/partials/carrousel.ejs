@@ -31,7 +31,6 @@
                 </div>
             </div>
 
-
             <div class="item">
                 <img src="img/Window.jpg" alt="Windows">
                 <div class="carousel-caption">
@@ -55,3 +54,23 @@
         </a>
     </div>
     <!-- End Of Carousel -->
+    
+    <!--Flash Messages-->
+    <% if(error && error.length > 0){ %>
+        <div id="flash-container" class="container-fluid">
+            <div class="alert alert-danger text-center">
+              <p><%= error%></p>
+            </div>
+        </div>
+    <% } %>  
+    
+    
+    <% if(success && success.length > 0){ %>
+        <div id="flash-container" class="container-fluid">
+            <div class="alert alert-success text-center">
+              <p><%= success%></p>
+            </div>
+        </div>
+    <% } %>  
+        
+    
