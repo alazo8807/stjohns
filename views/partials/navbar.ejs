@@ -14,13 +14,13 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <% if(isHomePage){ %>
+                    <% if(pageId === "home"){ %>
                         <li><a href="#myCarousel">HOME</a></li>
                     <% } else{ %>
                         <li><a href="/">HOME</a></li>
                     <% } %>
                     
-                    <% if(isHomePage){ %>
+                    <% if(pageId === "home"){ %>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#massTime">MASS TIME</a></li>
                         <li><a href="#contact">CONTACT</a></li>
@@ -36,7 +36,7 @@
                         </ul>
                     </li>
                     <% if(userLogged){ %>
-                      <li><a href="#">Signed In as <%= userLogged.username %></a></li>
+                      <li><a href="#"><span id="usernameNavbar"><%= userLogged.username.substring(0,2).toUpperCase() %></span></a></li>
                       <li><a href="/logout">Logout</a></li>
                     <% } %>
                     <!--<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>-->

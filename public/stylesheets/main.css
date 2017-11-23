@@ -62,6 +62,11 @@ h1{
     background-color: #29292c !important;
 }
 
+#usernameNavbar{
+    border: 1px solid white !important;
+    border-radius: 50% !important;
+    padding: 5px 3px;
+}
 
 /* Remove border color from the collapsible button */
 
@@ -133,12 +138,38 @@ h1{
 
 }
 
+.jumbotron{
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.jumbCalendar{
+    background-image: url("/img/calendar.jpg");
+}
+
+.jumbHomilies{
+    background-image: url("/img/homilies.jpg");
+}
+
+.jumbBulletines{
+    background-image: url("/img/bulletin.jpg");
+}
+
+
 @media (max-width: 600px) {
     .carousel-caption {
         display: none;
         /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
+    
+    .jumbotron{
+        height: 200px;
+    }
 }
+
+
+
 
 #flash-container{
     padding-top: 20px;

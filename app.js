@@ -10,7 +10,7 @@ LocalStrategy = require("passport-local");
 
 var User = require("./models/user");
  
-var isHomePage = true;        
+var pageId = "home";        
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/stjohns", {useMongoClient: true});
@@ -48,7 +48,7 @@ app.get("/", function(req, res){
 });
 
 app.get("/landing", function(req, res){
-   res.render("landing", {isHomePage: true}); 
+   res.render("landing", {pageId: "home"}); 
 });
 
 app.post("/", function(req,res){
@@ -83,18 +83,34 @@ app.post("/", function(req,res){
    });
 });
 
+//-----------------------
+//AUTH ROUTES------------
+//-----------------------
 app.get("/login", function(req, res) {
-    res.render("login", {isHomePage: false});    
+    res.render("login", {pageId: "login"});    
 });
 
-app.get("/logout")
+app.post("/login", passport.authenticate("local", {
+        successRedirect: "/landing",
+        failureRedirect: "/login"
+    }), 
+function(req, res) {
+});
+
+
+app.get("/logout", function(req, res) {
+    req.logout();
+    req.flash("success", "You logged out successfully");
+    res.redirect("/landing");
+})
 
 app.get("/register", function(req, res) {
-    res.render("register", {isHomePage: false});    
+    res.render("register", {pageId: "register"});    
 });
 
 app.post("/register", function(req, res) {
-    console.log("here");
+   
+   console.log("here");
    var newUser = new User({username: req.body.username});
    var password = req.body.password;
    User.register(newUser, password, function(err, user){
@@ -112,15 +128,15 @@ app.post("/register", function(req, res) {
 });
 
 app.get("/homilies", function(req, res) {
-   res.render("homilies", {isHomePage: false}); 
+   res.render("homilies", {pageId: "homilies"}); 
 });
 
 app.get("/bulletin", function(req, res) {
-   res.render("bulletin", {isHomePage: false}); 
+   res.render("bulletin", {pageId: "bulletin"}); 
 });
 
 app.get("/calendar", function(req, res) {
-   res.render("calendar", {isHomePage: false}); 
+   res.render("calendar", {pageId: "calendar"}); 
 });
 
 

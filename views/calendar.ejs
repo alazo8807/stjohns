@@ -1,12 +1,15 @@
 <% include ./partials/headercalendar%>
 <% include ./partials/navbar%>
 <% include ./partials/carrousel%>
-	
-	
+
+
+<!--<script id="ch_cdn_embed" type="text/javascript" data-page-id="28084" data-cfasync="false" src="https://www.canadahelps.org/services/wa/js/apps/donatenow/embed.min.js"></script>-->
+
+
 	<h1 class="text-center">Calendar</h1>
-    <div id='calendar'></div>
+    <div id='calendar'></div>	
 
-
+	
     <footer class="text-center">
         <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
             <span class="glyphicon glyphicon-chevron-up"></span>
@@ -34,6 +37,7 @@
 		  // Add smooth scrolling to all links in navbar + footer link
 		  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
+		  
 		  // Make sure this.hash has a value before overriding default behavior
 		  if (this.hash !== "") {
 
@@ -60,6 +64,7 @@
   <script>
 
 	$(document).ready(function() {
+		
 
 		$('#calendar').fullCalendar({
 			
