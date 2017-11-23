@@ -1,11 +1,11 @@
 var     express = require("express"),
             app = express(),
-       passport = require("passport"),
      bodyParser = require("body-parser"),
        mongoose = require("mongoose"),
      nodemailer = require('nodemailer'),
   smtpTransport = require('nodemailer-smtp-transport'),
           flash = require('connect-flash'),
+       passport = require("passport"),
 LocalStrategy = require("passport-local");
 
 var User = require("./models/user");
@@ -13,7 +13,7 @@ var User = require("./models/user");
 var isHomePage = true;        
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/yelp-camp", {useMongoClient: true});
+mongoose.connect("mongodb://localhost/stjohns", {useMongoClient: true});
 
 app.set("view engine", "ejs");
 app.use( bodyParser.urlencoded({extended: true}));
@@ -39,6 +39,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(function(req,res,next){
     res.locals.error = req.flash("error");
     res.locals.success = req.flash("success");
+    res.locals.userLogged = req.user;
     next();
 });
 
@@ -64,7 +65,7 @@ app.post("/", function(req,res){
    
    var mailOptions = {
      from: req.body.email,
-     to: 'stjohnkitchener@gmail.com',
+     to: 'pastor@stjohnskitchener.ca',
      subject: 'From ' + req.body.name,
      text: 'Reply to: ' + req.body.email + '\r\r' +  req.body.comments
    };
@@ -84,6 +85,30 @@ app.post("/", function(req,res){
 
 app.get("/login", function(req, res) {
     res.render("login", {isHomePage: false});    
+});
+
+app.get("/logout")
+
+app.get("/register", function(req, res) {
+    res.render("register", {isHomePage: false});    
+});
+
+app.post("/register", function(req, res) {
+    console.log("here");
+   var newUser = new User({username: req.body.username});
+   var password = req.body.password;
+   User.register(newUser, password, function(err, user){
+        if(err){
+            console.log(err);
+            req.flash("error", err.message);
+            return res.redirect("/register");
+        }
+        passport.authenticate("local")(req, res, function(){
+            console.log("here2");
+            req.flash("success", "Welcome " + req.user.username + "!");
+            res.redirect("/landing");
+        });
+   }) 
 });
 
 app.get("/homilies", function(req, res) {

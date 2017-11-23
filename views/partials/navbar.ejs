@@ -28,13 +28,17 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
                         <span class="caret"></span>
-                      </a>
+                        </a>
                         <ul class="dropdown-menu">
                           <li><a href="/homilies">Homilies</a></li>
                           <li><a href="/bulletin">Weekly Bulletin</a></li>
-                          <li><a href="/calendar">Calendar</a></li>
+                          <li><a href="/calendar">Calendar</a></li>  
                         </ul>
                     </li>
+                    <% if(userLogged){ %>
+                      <li><a href="#">Signed In as <%= userLogged.username %></a></li>
+                      <li><a href="/logout">Logout</a></li>
+                    <% } %>
                     <!--<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>-->
                     <li><span style="margin-right: 15px;"></span> </li>
                 </ul>
