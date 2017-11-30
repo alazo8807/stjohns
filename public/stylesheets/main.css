@@ -116,20 +116,57 @@ h1{
     /* -webkit-filter: grayscale(90%);
     filter: grayscale(90%); make all photos black and white */
     background-size: contain;
-    width: 100%; /* Set width to 100% */
+    width: 100%; 
     height:auto;
     margin: auto;
 }
 
 .carousel-caption{
-		top:30% !important;
+		top:0 !important;
+		-webkit-animation: slidetext 1s forward; /* Safari 4.0 - 8.0 */
+        animation: slidetext 1s forwards;
+        opacity: 0;
 
 }
 
+.carousel-caption hr{
+		transform: translateX(-400px);
+		opacity:0;
+		-webkit-animation: hrslide 1s 0.5s forward; /* Safari 4.0 - 8.0 */
+        animation: hrslide 1s 0.5s forwards;
+        
+
+}
+
+
 @media (max-width: 720px) {
     .carousel-caption {
-        top:20% !important;
-        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        top:0% !important;
+        -webkit-animation: slidetext2 1s forward; /* Safari 4.0 - 8.0 */
+        animation: slidetext 1s forwards;
+        opacity: 0;
+    }
+}
+
+@keyframes slidetext{
+    100%{
+        opacity: 1;
+        top: 30%;
+    }
+}
+
+@keyframes slidetext2{
+    100%{
+        opacity: 1;
+        top: 30%;
+    }
+}
+
+@keyframes hrslide{
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        
     }
 }
 
