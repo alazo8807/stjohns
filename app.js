@@ -13,7 +13,8 @@ var User = require("./models/user");
 var pageId = "home";        
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DATABASEURL, {useMongoClient: true});
+// mongoose.connect(process.env.DATABASEURL, {useMongoClient: true});
+mongoose.connect("mongodb://alazo8807:Cujae8807@ds125556.mlab.com:25556/guadalupe", {useMongoClient: true});
 
 // mongoose.connect("mongodb://localhost/stjohns", {useMongoClient: true});
 
